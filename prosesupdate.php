@@ -18,7 +18,7 @@ if(isset($_POST['tapi_upload'])){
       header('location:index.php');
     } else {
       include_once("delete_video.php");
-      unset($_SESSION['stats']);
+      unset($_SESSION['del']);
       $format = substr($_FILES['fileupdate']['name'], -4);
       $target_dir = "videos/";
       $target_file = $target_dir . $row['id_video'] . $format;

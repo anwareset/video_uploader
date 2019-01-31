@@ -97,6 +97,11 @@ if(!isset($_SESSION['id_user'])){
             <strong>Success!</strong> Berkas berhasil diunggah.
           </div>
           <?php }
+            if(@$_SESSION['del'] == 'suc'){ ?>
+            <div class="alert alert-success">
+            <strong>Success!</strong> Berkas berhasil dihapus.
+          </div>
+          <?php }
             if(@$_SESSION['stats'] == 'err'){ ?>
             <div class="alert alert-danger">
             <strong>Oops!</strong> Terjadi suatu kesalahan.
@@ -236,7 +241,7 @@ if(!isset($_SESSION['id_user'])){
           <div class="form-group">
             <label class="col-form-label">Anda Yakin Akan Menghapus Video Ini?</label>
             <form action="delete_video.php">
-              <input type="hidden" name="hapus_vid">
+              <input type="hidden" name="idvideo">
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -272,4 +277,4 @@ if(!isset($_SESSION['id_user'])){
   </body>
 
 </html>
-<?php unset($_SESSION['stats']); unset($_SESSION['stat']); unset($_SESSION['update']); }?>
+<?php unset($_SESSION['stats']); unset($_SESSION['stat']); unset($_SESSION['del']); unset($_SESSION['update']); }?>

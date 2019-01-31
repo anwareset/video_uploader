@@ -9,6 +9,6 @@ $formatvid = substr($url, -4);
 $namafile = "videos/".$vid.$formatvid;
 unlink($namafile);
 mysqli_query($con,"DELETE FROM video_training WHERE id_video='$vid'");
-$_SESSION['stats'] = "suc";
+$_SESSION['del'] = "suc";
 header('location:index.php');
 ?>
