@@ -12,6 +12,7 @@ if($ceque == '0'){
 	$_SESSION['stat'] = 'err';
 	header('location: login.php');
 }else{
+	$_SESSION['stat'] = 'suc';
 	$_SESSION['id_user'] = $data['id_user'];
 	header('location: index.php');
 }

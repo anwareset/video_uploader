@@ -87,19 +87,23 @@ if(!isset($_SESSION['id_user'])){
           </ol>
 
           <?php
-          if(@$_SESSION['stat'] == 'suc'){ ?>
+            if(@$_SESSION['stat'] == 'suc'){ ?>
             <div class="alert alert-success">
             <strong>Success!</strong> Login Berhasil
           </div>
-          <?php } if(@$_SESSION['stats'] == 'suc'){ ?>
-          <div class="alert alert-succ  ess">
+          <?php }
+            if(@$_SESSION['stats'] == 'suc'){ ?>
+            <div class="alert alert-success">
             <strong>Success!</strong> Berkas berhasil diunggah.
-          </div> <?php } if(@$_SESSION['stats'] == 'err'){ ?>
-          <div class="alert alert-danger">
+          </div>
+          <?php }
+            if(@$_SESSION['stats'] == 'err'){ ?>
+            <div class="alert alert-danger">
             <strong>Oops!</strong> Terjadi suatu kesalahan.
           </div>
-        <?php } if(@$_SESSION['update'] == 'suc'){ ?>
-          <div class="alert alert-success">
+          <?php }
+            if(@$_SESSION['update'] == 'suc'){ ?>
+            <div class="alert alert-success">
             <strong>Success!</strong> Perubahan berhasil.
           </div>
         <?php } ?>
@@ -269,4 +273,4 @@ if(!isset($_SESSION['id_user'])){
   </body>
 
 </html>
-<?php unset($_SESSION['stats']); }?>
+<?php unset($_SESSION['stats']); unset($_SESSION['stat']); unset($_SESSION['update']); }?>
